@@ -19,28 +19,27 @@ function EmployeeForm({ addEmployee }) {
   return (
     <div className="employee-form-container">
       <h2>Add Employee</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
+      <form className="employee-form" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label>Name:</label>
           <input type="text" name="name" value={employee.name} onChange={handleChange} required />
-        </label>
+        </div>
 
-        <label>
-          Email:
+        <div className="form-group">
+          <label>Email:</label>
           <input type="email" name="email" value={employee.email} onChange={handleChange} required />
-        </label>
+        </div>
 
-        <label>
-          Phone:
+        <div className="form-group">
+          <label>Phone:</label>
           <input type="text" name="phone" value={employee.phone} onChange={handleChange} required />
-        </label>
+        </div>
 
+        <div className="form-group">
         <button type="submit">Add</button>
-      </form>
-
-      <h2>Employee List</h2>
-      {/* This is where the employee list will be displayed */}
-    </div>
+      </div>
+    </form>
+  </div>
   );
 }
 

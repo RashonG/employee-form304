@@ -5,25 +5,43 @@
   align-items: center;
 }
 
-.employee-form label {
-  margin-bottom: 0.5rem;
+
+/* Align labels to the left of input fields */
+.employee-form .form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
+/* Labels stay on the left */
+.employee-form label {
+  width: 80px;  /* Adjust width for better alignment */
+  text-align: right;  /* Align text to the right */
+  font-weight: normal; /* Remove bold */
+  margin-right: 10px; /* Space between label and input */
+}
+
+/* Inputs take up the remaining space */
 .employee-form input {
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border-radius: 0.25rem;
+  flex-grow: 1;
+  padding: 8px;
+  border-radius: 4px;
   border: 1px solid #ccc;
 }
 
 .employee-form button {
-  padding: 0.5rem 1rem;
+  padding: 10px;
   background-color: #0077cc;
-  color: #fff;
+  color: white;
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   cursor: pointer;
 }
+
+.employee-form button:hover {
+  background-color: #0056b3;
+}
+
 
 .employee-list {
   display: flex;
@@ -134,4 +152,23 @@ h1, h2 {
 
 .employee-form-container {
   margin: 0 auto;
+}
+.employee-list {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.employee-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.employee-list li {
+  margin: 5px 0;
+}
+
+.employee-list a {
+  text-decoration: none;
+  color: blue;
+  font-weight: normal;
 }

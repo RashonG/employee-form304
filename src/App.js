@@ -1,3 +1,4 @@
+import EmployeeList from "./components/EmployeeList";
 import { useState, useEffect } from 'react';
 import EmployeeForm from './components/EmployeeForm';
 
@@ -27,9 +28,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Employee Management</h1>
-      <EmployeeForm addEmployee={addEmployee} />
-      <h2>Saved Employees</h2>
+        <EmployeeForm addEmployee={addEmployee} />
+      <EmployeeList employees={employees} />
       <ul>
         {employees.map((employee, index) => (
           <li key={index}>
