@@ -1,8 +1,14 @@
 import './EmployeeForm.css';
-import { useState } from 'react';
-
+import { useState } from "react";
 function EmployeeForm({ addEmployee }) {
-  const [employee, setEmployee] = useState({ name: '', email: '', phone: '' });
+  const [employee, setEmployee] = useState({ 
+    employeeId: '', 
+    name: '', 
+    email: '', 
+    phone: '', 
+    city: '', 
+    state: '' 
+  });
 
   const handleChange = (e) => {
     setEmployee({ ...employee, [e.target.name]: e.target.value });
@@ -10,9 +16,9 @@ function EmployeeForm({ addEmployee }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (employee.name && employee.email && employee.phone) {
+    if (employee.employeeId && employee.name && employee.email && employee.phone && employee.city && employee.state) {
       addEmployee(employee);
-      setEmployee({ name: '', email: '', phone: '' }); // Reset form after submission
+      setEmployee({ employeeId: '', name: '', email: '', phone: '', city: '', state: '' }); // Reset form
     }
   };
 
@@ -20,6 +26,11 @@ function EmployeeForm({ addEmployee }) {
     <div className="employee-form-container">
       <h2>Add Employee</h2>
       <form className="employee-form" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label>Employee ID:</label>
+          <input type="text" name="employeeId" value={employee.employeeId} onChange={handleChange} required />
+        </div>
+
         <div className="form-group">
           <label>Name:</label>
           <input type="text" name="name" value={employee.name} onChange={handleChange} required />
@@ -36,10 +47,18 @@ function EmployeeForm({ addEmployee }) {
         </div>
 
         <div className="form-group">
+          <label>City:</label>
+          <input type="text" name="city" value={employee.city} onChange={handleChange} required />
+        </div>
+
+        <div className="form-group">
+          <label>State:</label>
+          <input type="text" name="state" value={employee.state} onChange={handleChange} required />
+        </div>
+
         <button type="submit">Add</button>
-      </div>
-    </form>
-  </div>
+      </form>
+    </div>
   );
 }
 

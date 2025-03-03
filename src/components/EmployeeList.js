@@ -1,5 +1,4 @@
-import "./EmployeeForm.css";
-import { Link } from "react-router-dom"; 
+import "./EmployeeList.css";
 
 function EmployeeList({ employees }) {
   return (
@@ -7,9 +6,14 @@ function EmployeeList({ employees }) {
       <h2>Employee List</h2>
       <ul>
         {employees.map((employee, index) => (
-          <li key={index}>
-            <Link to={`/employees/${index}`}>{employee.name}</Link> 
-          </li>
+          <li key={employee.id}>
+          <strong>
+  <a href={`#`} onClick={() => alert(`Clicked on Employee ID: ${employee.employeeId}`)}>
+    {employee.employeeId}
+  </a>
+</strong> - {employee.name} ({employee.state.toUpperCase()})
+
+        </li>        
         ))}
       </ul>
     </div>

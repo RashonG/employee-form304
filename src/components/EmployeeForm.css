@@ -1,174 +1,110 @@
+/* Force entire page content to center */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centers everything horizontally */
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
 
+/* Center the form */
+.employee-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Style the form */
 .employee-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: left;
 }
 
-
-/* Align labels to the left of input fields */
+/* Align labels and inputs */
 .employee-form .form-group {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  width: 100%;
   margin-bottom: 10px;
 }
 
-/* Labels stay on the left */
+/* Label styling */
 .employee-form label {
-  width: 80px;  /* Adjust width for better alignment */
-  text-align: right;  /* Align text to the right */
-  font-weight: normal; /* Remove bold */
-  margin-right: 10px; /* Space between label and input */
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-/* Inputs take up the remaining space */
+/* Input styling */
 .employee-form input {
-  flex-grow: 1;
+  width: 100%;
   padding: 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
 
+/* Center the Add button */
 .employee-form button {
+  width: 100px;
   padding: 10px;
-  background-color: #0077cc;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.employee-form button:hover {
-  background-color: #0056b3;
-}
-
-
-.employee-list {
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-  color: #333;
-  align-items: center;
-}
-
-.employee-list h1 {
-  font-size: 24px;
-  margin-bottom: 16px;
-}
-
-.employee-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.employee-list li {
-  margin-bottom: 8px;
-}
-
-.employee-list li a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.employee-detail {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.employee-detail label {
-  font-weight: bold;
-}
-
-.employee-detail table {
-  border-collapse: collapse;
-  width: 100%;
-  max-width: 600px;
-}
-
-.employee-detail td, .employee-detail th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-.employee-detail tr:nth-child(even){background-color: #f2f2f2;}
-
-.employee-detail tr:hover {background-color: #ddd;}
-
-.employee-detail th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #0077cc;
-  color: white;
-}
-.employee-form-container {
-  .employee-form-container {
-    max-width: 600px; 
-    margin: 20px auto; 
-    padding: 10px; 
-  }
-  
-}
-
-form {
-  width: 100%; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-label {
-  margin: 10px 0 5px;
-  font-weight: bold;
-}
-
-input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
   background-color: #007bff;
   color: white;
-  padding: 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-h1, h2 {
   text-align: center;
+  margin-top: 10px;
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.employee-form-container {
-  margin: 0 auto;
+
+.employee-form button:hover {
+  background-color: #0056b3 !important;
 }
-.employee-list {
+
+/* Force Employee List to center */
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   margin-top: 20px;
+}
+
+/* Employee List styling */
+.employee-list {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
   text-align: center;
 }
 
+/* Style list items */
 .employee-list ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
 }
 
 .employee-list li {
-  margin: 5px 0;
+  font-size: 16px;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
 }
 
-.employee-list a {
-  text-decoration: none;
-  color: blue;
-  font-weight: normal;
+/* Make employee IDs bold */
+.employee-list strong {
+  font-weight: bold;
 }

@@ -1,0 +1,32 @@
+/* Ensure the list aligns properly with the form */
+.employee-list {
+  width: 50%;
+  text-align: left;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the list items */
+.employee-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.employee-list li {
+  font-size: 16px;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Make employee IDs bold */
+.employee-list strong {
+  font-weight: bold;
+}
+
+/* Add spacing to the Employee List heading */
+.employee-list h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
